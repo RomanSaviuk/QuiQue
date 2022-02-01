@@ -1,0 +1,62 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body {
+    background-color: #83E4C1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.navbar-brand {
+    /*position: absolute;
+    top: 5px;
+    left: 10px;*/
+    width: 338px;
+}
+
+
+.al_right {
+    margin-right: 0 !important;
+}
+
+.navbar-brand img{
+    height: 60px;
+}
+
+svg {
+    filter: drop-shadow(inset 0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    color: white;
+}
+
+.nav-link, .nav-link:hover {
+    color: white;
+    width: 200px;
+    font-size: 20px;
+}
+
+.navbar-nav {
+    text-align: center;
+    margin-left: auto;
+}
+
+.nav-item {
+    text-align: right;
+}
+
+.navbar-toggler-icon {
+    background-image: url("/toggler-icon.png");
+}
+
+.navbar-toggler, {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+button:focus, button:focus-visible {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
