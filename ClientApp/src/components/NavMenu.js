@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, Row, Col} from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
 
@@ -27,35 +27,49 @@ export class NavMenu extends Component {
     render() {
         return (
             <header>
-                <Navbar className="navbar-expand-lg navbar-toggleable-lg">
+                <Navbar className="navbar-expand-lg navbar-toggleable-md">
                     <Container fluid>
-                        <NavbarBrand href="/">
-                            <img src="/logo.svg" alt=""/>
-                        </NavbarBrand>
-                        <NavbarToggler onClick={this.toggleNavbar} className="ml-auto" />
-                        <Collapse className="navbar-nav" isOpen={!this.state.collapsed} navbar>
-                            <ul className="navbar-nav">
-                                <NavItem>
-                                    <NavLink tag={Link} to="/createqueue">Create Queue</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} to="/myqueues">My Queues</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} to="/about">About</NavLink>
-                                </NavItem>
-                            </ul>
+                        <Row className="width100">
+                            <Col xs="3">
+                                <NavbarBrand href="/">
+                                    <NavLink tag={Link} className="adaptive_width" style={{ padding: "unset" }} to="/">
+                                        <img src="/logo.svg" alt="" />
+                                    </NavLink>
+                                </NavbarBrand>
+                            </Col>
 
-                            <ul className="navbar-nav al_right">
-                                <NavItem>
-                                    <NavLink tag={Link} to="/">Log In</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <img href="/" src="/logo.svg" alt="" height="60" />
-                                </NavItem>
-                            </ul>
+                            <Col xs="9">
+                                <NavbarToggler onClick={this.toggleNavbar} className="toggler_margin" />
+                                <Collapse className="navbar-nav" isOpen={!this.state.collapsed} navbar>
+                                    <Col xs="8">
+                                        <ul className="navbar-nav">
+                                            <NavItem>
+                                                <NavLink tag={Link} to="/createqueue">Create Queue</NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink tag={Link} to="/myqueues">My Queues</NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink tag={Link} to="/about">About</NavLink>
+                                            </NavItem>
+                                        </ul>
+                                    </Col>
 
-                        </Collapse>
+                                    <Col xs="4">
+                                        <ul className="navbar-nav justify-content-end">
+                                            <NavItem>
+                                                <NavLink tag={Link} className="adaptive_width" to="/account">Log In</NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink tag={Link} className="adaptive_width" to="/account">
+                                                    <div className="signup_button">Sign Up</div>
+                                                </NavLink>
+                                            </NavItem>
+                                        </ul>
+                                    </Col>
+                                </Collapse>
+                            </Col>
+                        </Row>
                     </Container>
                 </Navbar>
             </header>

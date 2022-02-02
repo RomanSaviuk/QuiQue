@@ -5,6 +5,7 @@ import { Home } from './components/Home.jsx';
 import { CreateQueue } from './components/CreateQueue';
 import { MyQueues } from './components/MyQueues';
 import { About } from './components/About';
+import { Account } from './components/Account.jsx';
 
 import './custom.css'
 
@@ -18,6 +19,7 @@ export default class App extends Component {
         <Route path='/createqueue' component={CreateQueue} />
         <Route path='/myqueues' component={MyQueues} />
         <Route path='/about' component={About} />
+        <Route path='/account' component={Account} />
       </Layout>
     );
   }

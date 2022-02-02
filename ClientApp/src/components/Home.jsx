@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import { Container, Row, Col} from 'reactstrap';
 import './Home.scss';
 
 export class Home extends Component {
@@ -23,11 +24,17 @@ export class Home extends Component {
 
     render() {
         return (
-                <div className="input_background">
-                    <div className="input_background__background2"></div>
-                    <div className="input_background__background1"></div>
-                </div>
-            
+            <Container fluid>
+                <Row>
+                    <Col sm="6">
+                        <div className="input_background"></div>
+                    </Col>
+
+                    <Col sm="6">
+                        Stop wasting time in queues use smart queue service today
+                    </Col>
+                </Row>
+            </Container>
         );
     }
 }
