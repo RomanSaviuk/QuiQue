@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
-import { Home } from './components/Home';
+import { Home } from './components/Home.jsx';
 import { CreateQueue } from './components/CreateQueue';
 import { MyQueues } from './components/MyQueues';
 import { About } from './components/About';
