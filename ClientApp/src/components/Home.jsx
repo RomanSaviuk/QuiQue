@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import { Container, Row, Col} from 'reactstrap';
+import { Container, Row, Col, Input, Button} from 'reactstrap';
 import './Home.scss';
 
 export class Home extends Component {
@@ -7,18 +7,18 @@ export class Home extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { value: '' };
+        this.state = { id: '' };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
-        this.setState({ value: event.target.value });
+        this.setState({ id: event.target.id });
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
+        alert('An id was submitted: ' + this.state.id);
         event.preventDefault();
     }
 
@@ -27,7 +27,15 @@ export class Home extends Component {
             <Container fluid>
                 <Row>
                     <Col sm="6">
-                        <div className="input_background"></div>
+                        <div className="input_background_background">
+                            <div className="input_background">
+                                <Input value={this.state.value} onChange={this.handleChange} id="idQ" placeholder="ID..."/>
+                            </div>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="Submit" />
+                        </div>
                     </Col>
 
                     <Col sm="6">
