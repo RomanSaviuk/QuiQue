@@ -52,13 +52,14 @@ export class NavMenu extends Component {
                                             <NavItem>
                                                 <NavLink tag={Link} to="/about">About</NavLink>
                                             </NavItem>
+                                                
                                         </ul>
                                     </Col>
 
                                     <Col xs="4">
                                         <ul className="navbar-nav justify-content-end">
                                             <NavItem>
-                                                <NavLink tag={Link} className="adaptive_width" to="/account">Log In</NavLink>
+                                                <NavLink tag={Link} className="adaptive_width" to="/login">Log In</NavLink>
                                             </NavItem>
                                             <NavItem>
                                                 <NavLink tag={Link} className="adaptive_width" to="/account">
